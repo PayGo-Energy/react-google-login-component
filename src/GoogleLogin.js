@@ -60,7 +60,7 @@ export default class GoogleLogin extends React.Component {
 
   render () {
     const {
-      socialId, scope, fetchBasicProfile, responseHandler,
+      socialId, scope, fetchBasicProfile, responseHandler, errorHandler,
       children, buttonText, ...props
     } = this.props;
 
