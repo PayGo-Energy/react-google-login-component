@@ -183,9 +183,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          scope = _props2.scope,
 	          fetchBasicProfile = _props2.fetchBasicProfile,
 	          responseHandler = _props2.responseHandler,
+	          errorHandler = _props2.errorHandler,
 	          children = _props2.children,
 	          buttonText = _props2.buttonText,
-	          props = _objectWithoutProperties(_props2, ['socialId', 'scope', 'fetchBasicProfile', 'responseHandler', 'children', 'buttonText']);
+	          props = _objectWithoutProperties(_props2, ['socialId', 'scope', 'fetchBasicProfile', 'responseHandler', 'errorHandler', 'children', 'buttonText']);
 
 	      props.disabled = this.state.disabled || props.disabled;
 
