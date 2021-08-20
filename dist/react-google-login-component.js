@@ -172,7 +172,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      auth2.signIn(options).then(function (googleUser) {
 	        return _this3.props.responseHandler(googleUser);
 	      }).catch(function (err) {
-	        return _this3.props.errorHandler && _this3.props.errorHandler(err);
+	        var errorHandler = _this3.props.errorHandler;
+
+	        if (errorHandler) errorHandler(err);else throw err;
 	      });
 	    }
 	  }, {

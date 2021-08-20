@@ -55,7 +55,11 @@ export default class GoogleLogin extends React.Component {
     }
     auth2.signIn(options)
         .then(googleUser => this.props.responseHandler(googleUser))
-        .catch(err => this.props.errorHandler && this.props.errorHandler(err));
+        .catch(err => {
+          const { errorHandler } = this.props;
+          if(errorHandler) errorHandler(err);
+          else throw err;
+        });
   }
 
   render () {
